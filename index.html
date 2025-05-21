@@ -5,7 +5,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
-
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -13,49 +12,71 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		<title>Happy birthday</title>
+		<title>Feliz Aniversário, Meu Amor</title>
+		<style>
+			.music-control {
+				position: absolute;
+				top: 20px;
+				right: 20px;
+				z-index: 9999;
+				background-color: rgba(255, 255, 255, 0.7);
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+				transition: all 0.3s ease;
+			}
+			.music-control:hover {
+				transform: scale(1.1);
+				background-color: rgba(255, 255, 255, 0.9);
+			}
+			@keyframes heartbeat {
+				0% { transform: scale(1); }
+				50% { transform: scale(1.1); }
+				100% { transform: scale(1); }
+			}
+			.mail .fa-envelope {
+				animation: heartbeat 1.5s infinite;
+			}
+			.boxMail.active .boxMail-container {
+				animation: shine 1.5s forwards;
+			}
+			@keyframes shine {
+				0% { box-shadow: none; }
+				100% { box-shadow: none; }
+			}
+			@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+				.boxMail {
+					-webkit-backdrop-filter: blur(10px);
+					backdrop-filter: blur(10px);
+					background-color: rgba(0, 0, 0, 0.6);
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container">
 			<div class="boxcontainer">
-				<div class="image">
-					<img src="flag.png" alt="" />
-				</div>
-				<div class="text-happybirthday">
-					<img src="texthappy.png" alt="" />
-				</div>
-				<div class="cake">
-					<img src="cake.png" alt="" />
-				</div>
+				<div class="image"><img src="flag.png" alt="" /></div>
+				<div class="text-happybirthday"><img src="texthappy.png" alt="" /></div>
+				<div class="cake"><img src="cake.png" alt="" id="cakeImage" /></div>
 				<div class="box-balloon">
-					<div class="balloon-item1">
-						<img src="balloon.png" alt="" />
-					</div>
-					<div class="balloon-item1">
-						<img src="balloon.png" alt="" />
-					</div>
+					<div class="balloon-item1"><img src="balloon.png" alt="" /></div>
+					<div class="balloon-item1"><img src="balloon.png" alt="" /></div>
 				</div>
 				<div class="box-cloud">
-					<div class="cloud">
-						<img src="cloud.png" alt="" />
-					</div>
-					<div class="cloud">
-						<img src="cloud.png" alt="" />
-					</div>
+					<div class="cloud"><img src="cloud.png" alt="" /></div>
+					<div class="cloud"><img src="cloud.png" alt="" /></div>
 				</div>
 				<div class="box-firework">
-					<div class="firework">
-						<img src="firework.png" alt="" />
-						<img src="firework1.png" alt="" id="firework1" />
-					</div>
-					<div class="firework">
-						<img src="firework.png" alt="" />
-						<img src="firework1.png" alt="" id="firework1" />
-					</div>
+					<div class="firework"><img src="firework.png" alt="" /><img src="firework1.png" alt="" id="firework1" /></div>
+					<div class="firework"><img src="firework.png" alt="" /><img src="firework1.png" alt="" id="firework1" /></div>
 				</div>
-				<div class="paperCannons">
-					<img src="paperCannons1.png" alt="" />
-				</div>
+				<div class="paperCannons"><img src="paperCannons1.png" alt="" /></div>
 				<div class="box-giftbox">
 					<img src="giftbox.png" alt="" />
 					<img src="giftbox.png" alt="" />
@@ -64,91 +85,165 @@
 					<img src="giftbox.png" alt="" />
 					<img src="giftbox.png" alt="" />
 				</div>
-				<div class="mail">
-					<i class="fa-regular fa-envelope"></i>
-				</div>
+				<div class="mail"><i class="fa-regular fa-envelope"></i></div>
 				<div class="boxcute">
-					<div class="cute1">
-						<img src="cute.png" alt="" />
-					</div>
-					<div class="cute2">
-						<img src="cute.png" alt="" />
-					</div>
+					<div class="cute1"><img src="cute.png" alt="" /></div>
+					<div class="cute2"><img src="cute.png" alt="" /></div>
 				</div>
 			</div>
+
+			<!-- Botão de controle da música -->
+			<div class="music-control">
+				<i class="fa-solid fa-music"></i>
+			</div>
+
 			<div class="boxMail">
 				<i class="fa-solid fa-xmark"></i>
 				<div class="boxMail-container">
 					<div class="card1">
-						<div class="userImg">
-							<img src="Picture3.jpg" alt="" />
-						</div>
+						<div class="userImg"><img src="Picture3.jpg" alt="" /></div>
 						<h3>Happy birthday</h3>
-						<div class="imageCute">
-							<img src="cute1.png" alt="" />
-						</div>
+						<div class="imageCute"><img src="cute1.png" alt="" /></div>
 					</div>
 					<div class="card2">
 						<div class="card2-content">
-							<h3>Gửi em!</h3>
+							<h3>Para o meu amor 💛</h3>
 							<h2>
-								Hôm nay là một ngày đặc biệt đối với một người đặc biệt nì. Chúc
-								e có một ngày sinh nhật thật ý nghĩa, vui vẻ vẻ, hạnh phúc bên
-								gia đình và bạn bè. Chúc e sang tuổi mới lun lun vui vẻ, phải
-								lun lun vui tươi không cần tưới nháaaaa hahah, ngày càng xưn đẹp
-								hơn những năm khác nì gấp mũ n lần lun cho ae cây xoài hahaha ,
-								học giỏi nì nhưng mà học vẫn phải chú ý giữ gìn sức khỏe em nhé
-								và đặc bịt sớm có bồ như em mong muốn nháaaaa:3 . Tuy a không ở
-								gần em và có những món quà ý nghĩa đối với em nhưng a vẫn lun
-								mong muốn những điều tốt đẹp đến với em. Anh chỉ biết dùng vẻ
-								đẹp của IT làm quà tặng em tuy chỉ là 1 giao diện ko phải là 1
-								món quà vật chất nhưng a mong muốn rằng nó sẽ là 1 món quà ý
-								nghĩa, 1 món quà tinh thần nào đó trong ngày đặc biệt của em. Và
-								cuối cùng a chúc cô gái đặc biệt sinh nhật vui vẻ nhaaaaaaaaaa.
-								Chúc em tất cả những điều tốt đẹp nhấtttttt nhéeeeeeee hihi^^
+								Hoje é teu dia, amorzinho… e antes de qualquer coisa,  
+								quero que saiba que não tem problema se o coração estiver meio apertado,  
+								se o dia não parecer tão leve quanto todo mundo espera que seja.  
+								Tá tudo bem se você não tiver vontade de comemorar com fogos,  
+								porque só o fato de você existir já é motivo de festa pro meu mundo inteiro.  
+								Quero te desejar não só parabéns, mas paz — aquela paz suave,  
+								que envolve o peito e diz: "tá tudo bem ser você".  
+								Que nesse novo ciclo, você se sinta mais seguro, mais livre,  
+								mais aceito, mais querido… exatamente do jeitinho que é.  
+								Que os dias difíceis sejam mais leves,  
+								e que nos dias bons você lembre: você merece cada parte de felicidade que chegar.  
+								Tô aqui, hoje e sempre, pra te lembrar disso.  
+								Obrigada por ser você, mesmo nos dias em que parece difícil.  
+								Feliz aniversário, meu amor. Você é um presente pra quem te tem.  
+								E eu? Eu sou a sortuda que te ama. 💛  
 							</h2>
-							<div class="imageCute2">
-								<img src="cute2.png" alt="" />
-							</div>
+							<div class="imageCute2"><img src="cute2.png" alt="" /></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<!-- Música de fundo atualizada -->
+		<audio id="bgMusic" loop>
+			<source src="https://raw.githubusercontent.com/Bisnaguinhax/musica-cartao/main/ssstik.io_1747699452368.mp3" type="audio/mpeg">
+			Seu navegador não suporta áudio.
+		</audio>
+
+		<script>
+			window.addEventListener('load', function() {
+				setTimeout(function() {
+					document.getElementById('bgMusic').play().catch(e => {
+						console.log("Auto-play foi bloqueado pelo navegador.");
+					});
+				}, 1000);
+			});
+
+			document.addEventListener('mousemove', function (e) {
+				let body = document.querySelector('body');
+				let heart = document.createElement('span');
+				let x = e.offsetX;
+				let y = e.offsetY;
+				heart.style.left = x + 'px';
+				heart.style.top = y + 'px';
+
+				let size = Math.random() * 10;
+				heart.style.width = 4 * size + 'px';
+				heart.style.height = 4 * size + 'px';
+
+				let transformValue = Math.random() * 360;
+				heart.style.transform = 'rotate(' + transformValue + 'deg)';
+
+				body.appendChild(heart);
+				setTimeout(function () {
+					heart.remove();
+				}, 1000);
+			});
+
+			let mailBox = document.querySelector('.mail');
+			let boxmail = document.querySelector('.boxMail');
+			var close = document.querySelector('.fa-xmark');
+
+			mailBox.onclick = function () {
+				mailBox.classList.toggle('active');
+				boxmail.classList.add('active');
+				confettiEffect();
+			};
+
+			close.addEventListener('click', function () {
+				boxmail.classList.remove('active');
+			});
+
+			const musicControl = document.querySelector('.music-control');
+			const bgMusic = document.getElementById('bgMusic');
+			let musicPlaying = false;
+
+			musicControl.addEventListener('click', function() {
+				if (musicPlaying) {
+					bgMusic.pause();
+					musicControl.innerHTML = '<i class="fa-solid fa-music"></i>';
+				} else {
+					bgMusic.play();
+					musicControl.innerHTML = '<i class="fa-solid fa-pause"></i>';
+				}
+				musicPlaying = !musicPlaying;
+			});
+
+			document.getElementById('cakeImage').addEventListener('click', function() {
+				this.style.animation = 'bounce 0.5s';
+				setTimeout(() => {
+					this.style.animation = '';
+				}, 500);
+			});
+
+			function confettiEffect() {
+				for (let i = 0; i < 50; i++) {
+					let confetti = document.createElement('div');
+					confetti.style.position = 'absolute';
+					confetti.style.width = '10px';
+					confetti.style.height = '10px';
+					confetti.style.backgroundColor = getRandomColor();
+					confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+					confetti.style.left = Math.random() * window.innerWidth + 'px';
+					confetti.style.top = '0';
+					confetti.style.zIndex = '9999';
+					document.body.appendChild(confetti);
+
+					let animation = confetti.animate([
+						{ transform: 'translateY(0) rotate(0)', opacity: 1 },
+						{ transform: `translateY(${window.innerHeight}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+					], {
+						duration: 1500 + Math.random() * 3000,
+						easing: 'cubic-bezier(.4,0,.2,1)'
+					});
+
+					animation.onfinish = function() {
+						confetti.remove();
+					};
+				}
+			}
+
+			function getRandomColor() {
+				const colors = ['#FF9999', '#FFFF99', '#99FF99', '#99FFFF', '#9999FF', '#FF99FF'];
+				return colors[Math.floor(Math.random() * colors.length)];
+			}
+
+			document.head.insertAdjacentHTML('beforeend', `
+				<style>
+					@keyframes bounce {
+						0%, 100% { transform: scale(1); }
+						50% { transform: scale(1.2); }
+					}
+				</style>
+			`);
+		</script>
 	</body>
-	<script>
-		document.addEventListener('mousemove', function (e) {
-			let body = document.querySelector('body');
-			let heart = document.createElement('span');
-			let x = e.offsetX;
-			let y = e.offsetY;
-			heart.style.left = x + 'px';
-			heart.style.top = y + 'px';
-
-			let size = Math.random() * 10;
-			heart.style.width = 4 * size + 'px';
-			heart.style.height = 4 * size + 'px';
-
-			let transformValue = Math.random() * 360;
-			heart.style.transform = 'rotate(' + transformValue + 'deg)';
-
-			body.appendChild(heart);
-
-			setTimeout(function () {
-				heart.remove();
-			}, 1000);
-		});
-
-		let mailBox = document.querySelector('.mail');
-		let boxmail = document.querySelector('.boxMail');
-		var close = document.querySelector('.fa-xmark');
-		mailBox.onclick = function () {
-			mailBox.classList.toggle('active');
-			boxmail.classList.add('active');
-		};
-
-		close.addEventListener('click', function () {
-			boxmail.classList.remove('active');
-		});
-	</script>
 </html>
